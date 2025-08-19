@@ -1,0 +1,85 @@
+/* Wrap calendar in a container */
+.calendar-container {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 0px;
+  overflow: hidden;
+  background-color: inherit;
+  color: inherit;
+  box-shadow: none; /* Removed shadow completely */
+}
+
+/* Calendar navigation header */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255); /* Transparent header */
+  color: rgb(255, 255, 255);
+  padding: 50px;
+  font-weight: bold;
+}
+
+/* Month label */
+.react-calendar__navigation__label {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Navigation buttons */
+.react-calendar__navigation button {
+  background: transparent;
+  border: none;
+  color: blue;
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 0px;
+  transition: transform 0.33s ease;
+  cursor: pointer;
+}
+
+/* Bubble hover effect - transparent bubble */
+.react-calendar__navigation button:hover {
+  background: transparent; /* No background bubble */
+  transform: scale(1.2);
+}
+
+/* Calendar days (numbers) */
+.react-calendar__month-view__days__day {
+  padding: 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  color: black; /* Changed day text color to black */
+}
+
+/* Hover effect on days */
+.react-calendar__month-view__days__day:hover {
+  background: rgba(0, 123, 255, 0.2);
+}
+
+/* Today highlight */
+.react-calendar__tile--now {
+  background: rgba(0, 123, 255, 0.3) !important;
+  border-radius: 6px;
+}
+
+/* Active date */
+.react-calendar__tile--active {
+  background: #007bff !important;
+  color: white !important;
+  border-radius: 6px;
+}
+
+
+/* Force calendar to always appear light */
+.calendar-container {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.calendar-container .react-calendar__navigation button,
+.calendar-container .react-calendar__navigation__label,
+.calendar-container .react-calendar__month-view__days__day {
+  color: #000000 !important;
+}
