@@ -41,7 +41,7 @@ export default function App() {
           fontFamily: "Arial",
           minHeight: "100vh",
           width: "100%",
-          background: darkMode ? "#121212" : "#f5f5f5",
+          background: darkMode ? "#121212" : "#ffffffff",
           color: darkMode ? "#ffffff" : "#000000",
           transition: "all 0.3s ease",
           display: "flex",
@@ -82,7 +82,7 @@ export default function App() {
               onChange={handleChangeImage}
             />
 
-            <h1>I am Ran</h1>
+            <h1>iam Ran</h1>
           </div>
 
           <button
@@ -90,7 +90,7 @@ export default function App() {
             style={{
               padding: "8px 12px",
               borderRadius: "25px",
-              background: darkMode ? "#333" : "#ddd",
+              background: darkMode ? "#333" : "#d9d5d5ff",
               color: darkMode ? "#fff" : "#000",
               border: "none",
               cursor: "pointer",

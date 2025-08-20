@@ -68,7 +68,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   transition: border-color 0.25s, background 0.3s ease, color 0.3s ease;
 }
@@ -79,7 +79,7 @@ button:hover {
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 2px auto -webkit-focus-ring-color;
 }
 
 /* Light Mode Button Override */
@@ -117,8 +117,8 @@ body.light-mode button {
 /* Calendar Styling */
 .react-calendar {
   background: inherit !important;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 0px solid #ffffff;
+  border-radius: px;
   padding: 10px;
   max-width: 400px;
 }
@@ -143,14 +143,14 @@ li {
 }
 
 body.light-mode li {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgb(255, 255, 255);
 }
 
 /* Input Field */
 input[type="text"] {
   padding: 8px;
   width: 70%;
-  border-radius: 6px;
+  border-radius: 20px;
   border: 1px solid #ccc;
   font-size: 1em;
   margin-right: 10px;
@@ -159,15 +159,20 @@ input[type="text"] {
 /* Avatar bubble hover effect */
 .avatar-bubble:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 12px rgba(0, 123, 255, 0.6);
+  box-shadow: 0 0 0px rgba(255, 255, 255, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
 }
 
 .task-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  transform: scale(1.01);
+  transition: transform 0.3s ease, box-shadow 0s ease;
+  box-shadow: 0 0px 0px rgba(255, 255, 255, 0.2);
 }
 .task-item button:hover {
-  opacity: 0.85;
+  opacity: 0.5;
+   transform: scale(1.01);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 0px 0px rgba(255, 255, 255, 0.2);
 }
 
