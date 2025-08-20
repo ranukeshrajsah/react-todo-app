@@ -1,0 +1,139 @@
+/* Container */
+.tasks-box {
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Header */
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.tasks-controls {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.tab-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #f0f0f0;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.clear-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #dc3545;
+  color: #fff;
+  margin-left: 10px;
+  transition: all 0.2s ease;
+}
+
+/* Input */
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.input-area button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Task list */
+.tasks-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.no-tasks {
+  text-align: center;
+  color: #888;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #f0f4ff;
+}
+
+.task-item.completed {
+  background: #d4edda;
+}
+
+.task-item.archived {
+  background: #f8d7da;
+}
+
+.task-item span.completed {
+  text-decoration: line-through;
+}
+
+/* Task actions */
+.task-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.action-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.action-btn.complete {
+  background: #28a745;
+}
+
+.action-btn.archive {
+  background: #dc3545;
+}
+
+.action-btn.reopen {
+  background: #007bff;
+}
