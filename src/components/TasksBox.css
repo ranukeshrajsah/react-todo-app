@@ -1,11 +1,20 @@
+/* Root wrapper ensures isolation from global themes */
+.tasks-box-root {
+  all: unset;
+  display: block;
+}
+
 /* Container */
 .tasks-box {
-  padding: 20px;
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  all: unset;
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff !important;
+  color: #000000 !important;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   height: 100%;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -26,13 +35,14 @@
 }
 
 .tab-btn {
+  all: unset;
   padding: 6px 12px;
   border-radius: 6px;
-  border: none;
   cursor: pointer;
   background: #f0f0f0;
   color: #000;
-  transition: all 0.2s ease;
+  font-size: 14px;
+  text-align: center;
 }
 
 .tab-btn.active {
@@ -41,14 +51,13 @@
 }
 
 .clear-btn {
+  all: unset;
   padding: 6px 12px;
   border-radius: 6px;
-  border: none;
   cursor: pointer;
   background: #dc3545;
   color: #fff;
   margin-left: 10px;
-  transition: all 0.2s ease;
 }
 
 /* Input */
@@ -59,21 +68,23 @@
 }
 
 .input-area input {
+  all: unset;
   flex: 1;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  outline: none;
+  background: #fff;
+  color: #000;
 }
 
 .input-area button {
+  all: unset;
   padding: 10px 16px;
   border-radius: 8px;
   background-color: #007bff;
   color: #fff;
-  border: none;
+  text-align: center;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 /* Task list */
@@ -94,17 +105,11 @@
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   background: #f0f4ff;
 }
 
 .task-item.completed {
   background: #d4edda;
-}
-
-.task-item.archived {
-  background: #f8d7da;
 }
 
 .task-item span.completed {
@@ -118,20 +123,16 @@
 }
 
 .action-btn {
-  border: none;
+  all: unset;
   border-radius: 6px;
   padding: 4px 8px;
   color: #fff;
   cursor: pointer;
-  transition: background 0.3s ease;
+  text-align: center;
 }
 
 .action-btn.complete {
   background: #28a745;
-}
-
-.action-btn.archive {
-  background: #dc3545;
 }
 
 .action-btn.reopen {

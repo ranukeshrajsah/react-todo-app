@@ -46,76 +46,78 @@ export default function TasksBox({ selectedDate }) {
   );
 
   return (
-    <div ref={containerRef} className="tasks-box">
-      {/* Header */}
-      <div className="tasks-header">
-        <h2>Tasks for {selectedDate.toDateString()}</h2>
-        <div className="tasks-controls">
-          {["open", "completed"].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setFilter(tab)}
-              className={`tab-btn ${filter === tab ? "active" : ""}`}
-            >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            </button>
-          ))}
+    <div ref={containerRef} className="tasks-box-root">
+      <div className="tasks-box">
+        {/* Header */}
+        <div className="tasks-header">
+          <h2>Tasks for {selectedDate.toDateString()}</h2>
+          <div className="tasks-controls">
+            {["open", "completed"].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setFilter(tab)}
+                className={`tab-btn ${filter === tab ? "active" : ""}`}
+              >
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              </button>
+            ))}
 
-          {filteredTasks.length > 0 && (
-            <button onClick={clearTasks} className="clear-btn">
-              Clear All
-            </button>
-          )}
+            {filteredTasks.length > 0 && (
+              <button onClick={clearTasks} className="clear-btn">
+                Clear All
+              </button>
+            )}
+          </div>
         </div>
-      </div>
 
-      {/* Input area */}
-      {filter === "open" && (
-        <div className="input-area">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Add a new task..."
-            onKeyDown={(e) => e.key === "Enter" && addTask()}
-          />
-          <button onClick={addTask}>Add</button>
-        </div>
-      )}
-
-      {/* Task list */}
-      <div className="tasks-list">
-        {filteredTasks.length === 0 && (
-          <p className="no-tasks">No {filter} tasks for this day</p>
+        {/* Input area */}
+        {filter === "open" && (
+          <div className="input-area">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Add a new task..."
+              onKeyDown={(e) => e.key === "Enter" && addTask()}
+            />
+            <button onClick={addTask}>Add</button>
+          </div>
         )}
-        <ul>
-          {filteredTasks.map((task, index) => (
-            <li key={index} className={`task-item ${task.status}`}>
-              <span className={task.status === "completed" ? "completed" : ""}>
-                {task.text}
-              </span>
 
-              <div className="task-actions">
-                {filter === "open" && (
-                  <button
-                    onClick={() => updateTaskStatus(index, "completed")}
-                    className="action-btn complete"
-                  >
-                    ✔
-                  </button>
-                )}
-                {filter === "completed" && (
-                  <button
-                    onClick={() => updateTaskStatus(index, "open")}
-                    className="action-btn reopen"
-                  >
-                    ↩
-                  </button>
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
+        {/* Task list */}
+        <div className="tasks-list">
+          {filteredTasks.length === 0 && (
+            <p className="no-tasks">No {filter} tasks for this day</p>
+          )}
+          <ul>
+            {filteredTasks.map((task, index) => (
+              <li key={index} className={`task-item ${task.status}`}>
+                <span className={task.status === "completed" ? "completed" : ""}>
+                  {task.text}
+                </span>
+
+                <div className="task-actions">
+                  {filter === "open" && (
+                    <button
+                      onClick={() => updateTaskStatus(index, "completed")}
+                      className="action-btn complete"
+                    >
+                      ✔
+                    </button>
+                  )}
+                  {filter === "completed" && (
+                    <button
+                      onClick={() => updateTaskStatus(index, "open")}
+                      className="action-btn reopen"
+                    >
+                      ↩
+                    </button>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
