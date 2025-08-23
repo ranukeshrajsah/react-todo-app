@@ -1,0 +1,140 @@
+/* Root wrapper ensures isolation from global themes */
+.tasks-box-root {
+  all: unset;
+  display: block;
+}
+
+/* Container */
+.tasks-box {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff !important;
+  color: #000000 !important;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Header */
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.tasks-controls {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.tab-btn {
+  all: unset;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #f0f0f0;
+  color: #000;
+  font-size: 14px;
+  text-align: center;
+}
+
+.tab-btn.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.clear-btn {
+  all: unset;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #dc3545;
+  color: #fff;
+  margin-left: 10px;
+}
+
+/* Input */
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-area input {
+  all: unset;
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #000;
+}
+
+.input-area button {
+  all: unset;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Task list */
+.tasks-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.no-tasks {
+  text-align: center;
+  color: #888;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #f0f4ff;
+}
+
+.task-item.completed {
+  background: #d4edda;
+}
+
+.task-item span.completed {
+  text-decoration: line-through;
+}
+
+/* Task actions */
+.task-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.action-btn {
+  all: unset;
+  border-radius: 6px;
+  padding: 4px 8px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.action-btn.complete {
+  background: #28a745;
+}
+
+.action-btn.reopen {
+  background: #007bff;
+}

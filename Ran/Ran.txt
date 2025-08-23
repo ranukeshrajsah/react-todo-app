@@ -1,0 +1,10 @@
+//TODO - 
+how to run the code
+
+//Project Overview
+Name: react-todo-app
+Type: ES module ("type": "module")
+Private: true
+Version: 0.0.0
+Main Entry (Electron): electron/main.js
+Purpose: A React-based Todo app bundled with Electron for desktop deployment.

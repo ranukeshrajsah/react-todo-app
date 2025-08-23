@@ -80,9 +80,17 @@
 
 /* Force calendar to always appear light */
 .calendar-container {
-  background-color: #ffffff !important;
+  width: 100%;
+  max-width: 350px;
+  border: none; /* Remove any border */
+  border-radius: 12px; /* Rounded corners to match TasksBox */
+  background-color: #ffffff !important; /* Always white */
   color: #000000 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow like TasksBox */
+  overflow: hidden; /* Keep edges clean */
+  padding: 10px; /* Add spacing inside */
 }
+
 
 .calendar-container .react-calendar__navigation button,
 .calendar-container .react-calendar__navigation__label,
